@@ -3,3 +3,7 @@ routes:
         type: simple
         index: True
         file: home.html
+    /portfolio:
+        type: data_yaml
+        file: portfolio.html
+        data: portfolio.yml

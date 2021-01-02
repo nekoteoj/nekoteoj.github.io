@@ -21,7 +21,9 @@ class Generator:
 
     def render_html(self, data):
         template = self.templateEnv.get_template(data["file"])
-        html = minify_html.minify(template.render())
+        if "page_data" not in data:
+            data["page_data"] = dict()
+        html = minify_html.minify(template.render(data["page_data"]))
         return html
 
     def save_html(self, filename: str, html: str):
@@ -38,6 +40,9 @@ class Generator:
         route_path = os.path.join(self.config.root_dir,
                                   self.config.src_dir,
                                   self.config.route_path)
+        data_dir = os.path.join(self.config.root_dir,
+                                 self.config.src_dir,
+                                 self.config.data_dir)
         output_dir = os.path.join(self.config.root_dir,
                                   self.config.output_dir)
         if os.path.exists(output_dir):
@@ -61,3 +66,8 @@ class Generator:
                     self.dump_html(data, data["file"])
                     if "index" in data and data["index"]:
                         self.dump_html(data, "index.html")
+                elif data["type"] == "data_yaml":
+                    with open(os.path.join(data_dir, data["data"])) as data_file:
+                        page_data = yaml.load(data_file, Loader=Loader)
+                        data["page_data"] = page_data
+                        self.dump_html(data, data["file"])
