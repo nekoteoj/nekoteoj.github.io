@@ -5,7 +5,7 @@ on:
             - main
 jobs:
     build-and-deploy:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-20.04
         steps:
             - name: Checkout 🛎️
               uses: actions/checkout@v2.3.1
@@ -14,6 +14,7 @@ jobs:
 
             - name: Install and Build 🔧
               run: |
+                  sudo apt-get install -y python3-setuptools python3-wheel
                   pip3 install -r requirements.txt
                   chmod +x ./compile.py
                   ./compile.py
