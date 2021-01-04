@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="theme-dark">
+<html lang="en" class="theme-light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,7 +30,18 @@
         var currentClassName = htmlElement.className;
         var newClassName = currentClassName === "theme-light" ? "theme-dark" : "theme-light";
         htmlElement.className = newClassName;
+        localStorage.setItem("theme", newClassName);
       }
+
+      function initTheme() {
+        var newClassName = localStorage.getItem("theme");
+        if (newClassName) {
+          var htmlElement = document.getElementsByTagName("html")[0];
+          htmlElement.className = newClassName;
+        }
+      }
+
+      initTheme();
     </script>
     {% endblock %}
   </body>
