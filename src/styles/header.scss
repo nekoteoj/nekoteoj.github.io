@@ -7,4 +7,17 @@
     top: 0;
     left: 0;
     @include theme-aware("background", "color-header");
+
+    .theme-button {
+        display: inline-block;
+        background: url(/assets/imgs/dark-mode.svg) no-repeat top left;
+        background-size: contain;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+
+        .theme-dark & {
+            background: url(/assets/imgs/light-mode.svg) no-repeat top left;
+        }
+    }
 }
