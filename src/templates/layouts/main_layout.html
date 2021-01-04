@@ -1,0 +1,17 @@
+{% extends "bases/default.html" %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="/css/header.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="/css/container.css" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="/css/navbar.css" media="print" onload="this.media='all'" />
+{% endblock %}
+
+{% block content %}
+{% include "partials/header.html" %}
+<div class="container">
+  {% block container %}
+  {% endblock %}
+</div>
+{% include "partials/navbar.html" %}
+{% endblock %}

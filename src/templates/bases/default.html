@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" class="theme-dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,8 +15,8 @@
     {% endblock %}
 
 
-    <link rel="stylesheet" href="/css/main.css" />
     {% block style %}
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'" />
     {% endblock %}
   </head>
 
@@ -24,6 +24,14 @@
     {% block content %}
     {% endblock %}
     {% block script %}
+    <script>
+      function toggleTheme() {
+        var htmlElement = document.getElementsByTagName("html")[0];
+        var currentClassName = htmlElement.className;
+        var newClassName = currentClassName === "theme-light" ? "theme-dark" : "theme-light";
+        htmlElement.className = newClassName;
+      }
+    </script>
     {% endblock %}
   </body>
 </html>

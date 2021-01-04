@@ -23,7 +23,7 @@ class Generator:
         template = self.templateEnv.get_template(data["file"])
         if "page_data" not in data:
             data["page_data"] = dict()
-        html = minify_html.minify(template.render(data["page_data"]))
+        html = minify_html.minify(template.render(data["page_data"]), minify_js=True)
         return html
 
     def save_html(self, filename: str, html: str):

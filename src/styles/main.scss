@@ -1,5 +1,10 @@
+@import "./bases/theme";
+@import "./bases/responsive";
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    @include theme-aware("background", "color-background");
+    @include theme-aware("color", "color-text");
 }
