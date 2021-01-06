@@ -4,12 +4,14 @@ $themes: (
         color-text: #000000,
         color-header: #efefef,
         color-navbar: lime,
+        theme-button: url(/assets/imgs/dark-mode.svg) no-repeat top left,
     ),
     dark: (
         color-background: #000000,
         color-text: #ffffff,
         color-header: #333333,
         color-navbar: green,
+        theme-button: url(/assets/imgs/light-mode.svg) no-repeat top left,
     ),
 );
 

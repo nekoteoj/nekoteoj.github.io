@@ -1,1 +1,53 @@
 name: Pisit Wajanasara
+email: compisit1234@gmail.com
+github: nekoteoj
+educations:
+    - name: "Chulalongkorn University"
+      location: "Bangkok, Thailand"
+      degree: "B.Eng. Computer Engineering (first-class honor)"
+      classOf: 2020
+      gpax: 3.96/4.00
+interests:
+    - Bioinformatics
+    - Computational Biology
+    - Machine Learning
+    - Deep Learning
+    - Web Development
+skills:
+    "Programming Languages":
+        - Python
+        - PHP
+        - Javascript
+        - Typescript
+        - Java
+        - Kotlin
+        - C#
+    "Library / Frameworks":
+        - Pytorch
+        - NumPy
+        - Pandas
+        - RDKit
+        - Matplotlib
+        - Angular
+        - Vue.js
+        - Laravel
+        - Koa.js
+        - ASP.NET
+works:
+    - name: "Research Internship"
+      company: "Division of Bioinformatics, University at Buffalo"
+      date: "Jun 2019 - Jul 2019"
+      description: "Developed a machine learning model for shotgun drug repurposing and drug virtual screening by predicting the binding affinity from drug in SMILES format  and protein sequences. The internship was supervised by Prof. Ram Samudrala."
+    - name: "Research Assistant"
+      company: "Dr.Duangdao Wichadakul’s lab, Chulalongkorn University"
+      date: "Oct 2020 - Present"
+      description: "Research Assistant in drug repurposing and virtual screening projects which use deep learning and natural language processing in the prediction pipeline. The research was granted by Thai Red Cross Society."
+teachings:
+    - course: "Discrete Structures and Computability class"
+      class: "Fall 2019"
+    - course: "Computer Engineering Mathematics (Linear Algebra) class"
+      class: "Spring 2019"
+    - course: "Computer Engineering Essentials class"
+      class: "Spring 2019"
+    - course: "Software Architecture class"
+      class: "Fall 2020"

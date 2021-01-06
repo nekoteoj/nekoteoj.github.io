@@ -1,6 +1,78 @@
 {% extends "layouts/main_layout.html" %}
 
 {% block container %}
-<h1>Portfolio</h1>
-My name is {{ name }}
+<h1>{{ name }}</h1>
+<strong>Email:</strong> {{ email }}
+<br />
+<strong>Github:</strong> {{ github }}
+
+<hr />
+
+<h2>Education</h2>
+<ul>
+{% for education in educations %}
+  <li>
+    <strong>Degree: </strong> {{ education.degree }}
+    <br />
+    <strong>Class of: </strong> {{ education.classOf }}
+    <br />
+    <strong>GPAX: </strong> {{ education.gpax }}
+    <br />
+    <strong>Institution:</strong> {{ education.name }}
+    <br />
+    <strong>Location: </strong> {{ education.location }}
+  </li>
+{% endfor %}
+</ul>
+
+<hr />
+
+<h2>Interests</h2>
+<ul>
+{% for interest in interests %}
+  <li>{{ interest }}</li>
+{% endfor %}
+</ul>
+
+<hr />
+
+<h2>Skills</h2>
+{% for skillName in skills.keys() %}
+  <h3>{{ skillName }}</h3>
+  <ul>
+    {% for skill in skills[skillName] %}
+      <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<hr />
+
+<h2>Works / Experiences</h2>
+<ul>
+  {% for work in works %}
+    <li>
+      <strong>Name: </strong> {{ work.name }}
+      <br />
+      <strong>Company: </strong> {{ work.company }}
+      <br />
+      <strong>Description: </strong> {{ work.description }}
+      <br />
+      <strong>Date: </strong> {{ work.date }}
+    </li>
+  {% endfor %}
+</ul>
+
+<hr />
+
+<h2>Teaching Assistants</h2>
+<ul>
+  {% for teaching in teachings %}
+    <li>
+      <strong>Course: </strong> {{ teaching.course }}
+      <br />
+      <strong>Class: </strong> {{ teaching.class }}
+    </li>
+  {% endfor %}
+</ul>
 {% endblock %}
