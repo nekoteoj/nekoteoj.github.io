@@ -20,11 +20,16 @@
         vertical-align: middle;
         line-height: 44px;
         text-decoration: none;
+        min-width: 72px;
         @include theme-aware('color', 'color-navbar-text');
 
         &:hover {
             opacity: 50%;
         }
+    }
+
+    .item.current {
+        @include theme-aware("background", "color-navbar-current");
     }
 
     .theme-dark & {

@@ -76,3 +76,10 @@
   {% endfor %}
 </ul>
 {% endblock %}
+
+{% block script %}
+{{ super() }}
+<script>
+  setPage("portfolio-item");
+</script>
+{% endblock %}

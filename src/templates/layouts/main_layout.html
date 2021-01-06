@@ -15,3 +15,15 @@
 </div>
 {% include "partials/navbar.html" %}
 {% endblock %}
+
+{% block script %}
+{{ super() }}
+<script>
+  function setPage(id) {
+    var item = document.getElementById(id);
+    if (item) {
+      item.className += " current";
+    }
+  }
+</script>
+{% endblock %}

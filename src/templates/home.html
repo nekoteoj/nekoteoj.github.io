@@ -14,7 +14,7 @@
     <h1>Pisit Wajanasara</h1>
     <p>Just a person who love Machine Learning and Software Development</p>
     <div class="button-group">
-      <a href="https://github.com/nekoteoj" target="_blank">
+      <a href="https://github.com/nekoteoj" target="_blank" rel="noreferrer">
         <button class="button">My Github</button>
       </a>
       <a href="/portfolio">
@@ -23,4 +23,11 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script>
+  setPage("home-item");
+</script>
 {% endblock %}
