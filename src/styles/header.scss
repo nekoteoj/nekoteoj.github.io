@@ -6,14 +6,25 @@
     height: 60px;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-family: 'Courier New', Courier, monospace;
     @include theme-aware("background", "color-header");
+
+    .title {
+        font-weight: bold;
+        font-size: 1.5em;
+    }
 
     .theme-button {
         display: inline-block;
         @include theme-aware("background", "theme-button");
         background-size: contain;
-        width: 36px;
+        width: 72px;
         height: 36px;
         cursor: pointer;
+        margin-left: auto;
     }
 }
