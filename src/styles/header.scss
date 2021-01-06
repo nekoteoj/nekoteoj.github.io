@@ -1,4 +1,5 @@
 @import "./bases/theme";
+@import "./bases/responsive";
 
 .header {
     position: fixed;
@@ -10,7 +11,10 @@
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(77, 77, 77, 1);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(77, 77, 77, 1);
+    box-shadow: 0px 0px 6px 0px rgba(77, 77, 77, 1);
     @include theme-aware("background", "color-header");
 
     .title {
@@ -26,5 +30,10 @@
         height: 36px;
         cursor: pointer;
         margin-left: auto;
+    }
+    .theme-dark & {
+        -webkit-box-shadow: 0px 0px 6px 0px rgba(200, 200, 200, 1);
+        -moz-box-shadow: 0px 0px 6px 0px rgba(200, 200, 200, 1);
+        box-shadow: 0px 0px 6px 0px rgba(200, 200, 200, 1);
     }
 }

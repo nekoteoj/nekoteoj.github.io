@@ -1,0 +1,59 @@
+@import "./bases/responsive";
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .profile {
+        max-width: calc(100vw - 20%);
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .button {
+        padding: 16px;
+        width: 100%;
+        margin-top: 8px;
+        font-size: 1.2em;
+        border-radius: 8px;
+        border: 0;
+        -webkit-box-shadow: 4px 4px 9px -4px rgba(107, 107, 107, 0.8);
+        -moz-box-shadow: 4px 4px 9px -4px rgba(107, 107, 107, 0.8);
+        box-shadow: 4px 4px 9px -4px rgba(107, 107, 107, 0.8);
+        cursor: pointer;
+    }
+
+    .theme-dark & .button {
+        -webkit-box-shadow: 4px 4px 9px -4px rgba(200, 200, 200, 0.8);
+        -moz-box-shadow: 4px 4px 9px -4px rgba(200, 200, 200, 0.8);
+        box-shadow: 4px 4px 9px -4px rgba(200, 200, 200, 0.8);
+    }
+
+    @include desktop {
+        flex-direction: row;
+
+        .profile {
+            max-width: 250px;
+        }
+
+        .block {
+            padding: 8px;
+        }
+
+        .button {
+            width: 320px;
+            font-size: 1em;
+        }
+    }
+}
